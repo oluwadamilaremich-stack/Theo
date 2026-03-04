@@ -13,7 +13,7 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-linear-to-r from-sky-900 to-indigo-900/80 shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-linear-to-r from-indigo-900/70 to-indigo-900/80 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
