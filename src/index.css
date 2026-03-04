@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono&display=swap');
+
+
+@layer base {
+  body {
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  code, pre {
+    font-family: 'DM Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out;
+  }
+
+  /* glassy card used across the UI (matches provided HTML sample) */
+  .glow-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  /* helper to hide scrollbars on horizontal lists */
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* dark / light mode backgrounds and a few overrides used in the example HTML */
+body {
+  background: radial-gradient(circle at center, #1f2a48 0%, #0f172a 70%);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.light {
+  background: radial-gradient(circle at center, #e0f2fe 0%, #bfdbfe 70%);
+  color: #1e293b;
+}
+
+body.light .glow-card {
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+body.light input {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0.15);
+  color: #1e293b;
+}
+
+body.light input::placeholder {
+  color: #64748b;
+}
+
+body.light .opacity-70 {
+  opacity: 0.6;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
