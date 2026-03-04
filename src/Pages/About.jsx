@@ -30,7 +30,7 @@ export default function About() {
         {/* Header */}
         <div className="mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-sm mb-4">
-            <span>☁️</span> About Deploying
+            <span>☁️</span> About Nimbus Weather Forecast
           </div>
 
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -104,7 +104,7 @@ VITE_WEATHER_API_KEY=ee81d3520ae6199e41fa61a897b7cd3b
           </div>
 
           <p className="text-slate-500 text-xs mt-3 break-words">
-            Get your free API key at{' '}
+            You can get your free API key at{' '}
             <a
               href="https://openweathermap.org/api"
               target="_blank"
